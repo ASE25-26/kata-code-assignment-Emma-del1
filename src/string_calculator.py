@@ -5,7 +5,7 @@ def add(numbers: str) -> int:
     # Implementiere die String-Kalkulator-Funktion hier
     if not numbers:
         return 0
-    standard_delimiter = ",| \n"
+    standard_delimiter = ",|\n"
 
     if numbers.startswith("//"):
         parts = numbers.split("\n", 1)
@@ -22,5 +22,5 @@ def add(numbers: str) -> int:
 
     neg = [n for n in nums if n < 0]
     if neg:
-        raise ValueError("Negatives not allowed: {neg}")
+        raise ValueError(f"Negatives not allowed: {neg}")
     return sum(n for n in nums if n <= 1000)
