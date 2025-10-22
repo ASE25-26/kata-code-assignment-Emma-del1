@@ -13,8 +13,8 @@ def add(numbers: str) -> int:
         numbers = parts[1]
 
         if delimiter_part.startswith("[") and delimiter_part.endswith("]"):
-            standard_delimiter = "|".join(re.escape(d) for d in re.findall(r"\[(.*?)\]",
-                                                                          delimiter_part))
+            standard_delimiter = "|".join(
+                re.escape(d) for d in re.findall(r"\[(.*?)\]", delimiter_part))
         else:
             standard_delimiter = re.escape(delimiter_part)
 
